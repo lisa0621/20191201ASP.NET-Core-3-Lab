@@ -1,0 +1,9 @@
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\bin\Debug\netstandard2.0\NeuralNetworkCSharp.dll.config
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\bin\Debug\netstandard2.0\NeuralNetworkCSharp.deps.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\bin\Debug\netstandard2.0\NeuralNetworkCSharp.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\bin\Debug\netstandard2.0\NeuralNetworkCSharp.pdb
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\obj\Debug\netstandard2.0\NeuralNetworkCSharp.csprojAssemblyReference.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\obj\Debug\netstandard2.0\NeuralNetworkCSharp.AssemblyInfoInputs.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\obj\Debug\netstandard2.0\NeuralNetworkCSharp.AssemblyInfo.cs
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\obj\Debug\netstandard2.0\NeuralNetworkCSharp.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\SNN\NeuralNetworkCSharp\obj\Debug\netstandard2.0\NeuralNetworkCSharp.pdb
