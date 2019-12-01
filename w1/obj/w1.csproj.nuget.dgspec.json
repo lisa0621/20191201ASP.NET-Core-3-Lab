@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\w1\\w1.csproj": {}
+  },
+  "projects": {
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\w1\\w1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\w1\\w1.csproj",
+        "projectName": "w1",
+        "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\w1\\w1.csproj",
+        "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
+        "outputPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\w1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lisa7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\solution1\\classlib1\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

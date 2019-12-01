@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj": {}
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj": {}
   },
   "projects": {
-    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj": {
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj",
+        "projectUniqueName": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj",
         "projectName": "NeuralNetworkCSharpTests",
-        "projectPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj",
+        "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\NeuralNetworkCSharpTests.csproj",
         "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
-        "outputPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\obj\\",
+        "outputPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharpTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj": {
-                "projectPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj"
+              "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj": {
+                "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj": {
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj",
+        "projectUniqueName": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj",
         "projectName": "NeuralNetworkCSharp",
-        "projectPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj",
+        "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\NeuralNetworkCSharp.csproj",
         "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
-        "outputPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\obj\\",
+        "outputPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\SNN\\NeuralNetworkCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
