@@ -20,9 +20,9 @@ namespace NeuralNetworkCSharp
     {
         private NeuralLayerFactory _layerFactory;
 
-        public List<NeuralLayer> _layers;
-        public Dictionary<int, double[]> _neuronErrors;
-        public double _learningRate;
+        internal List<NeuralLayer> _layers;
+        internal Dictionary<int, double[]> _neuronErrors;
+        internal double _learningRate;
         public double[][] _expectedResult;
 
         /// <summary>
