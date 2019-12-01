@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
         "outputPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\solution1\\classlib1\\obj\\",
         "projectStyle": "PackageReference",
+        "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
@@ -21,13 +22,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
+          "net472",
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\solution1\\classlib1\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          },
           "netstandard2.0": {
             "projectReferences": {}
           }
@@ -39,6 +45,9 @@
         }
       },
       "frameworks": {
+        "net472": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+        },
         "netstandard2.0": {
           "dependencies": {
             "NETStandard.Library": {
