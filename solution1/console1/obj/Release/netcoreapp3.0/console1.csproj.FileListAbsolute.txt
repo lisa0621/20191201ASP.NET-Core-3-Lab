@@ -1,0 +1,11 @@
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.exe
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.deps.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.runtimeconfig.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.runtimeconfig.dev.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\bin\Release\netcoreapp3.0\console1.pdb
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\obj\Release\netcoreapp3.0\console1.csprojAssemblyReference.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\obj\Release\netcoreapp3.0\console1.AssemblyInfoInputs.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\obj\Release\netcoreapp3.0\console1.AssemblyInfo.cs
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\obj\Release\netcoreapp3.0\console1.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\console1\obj\Release\netcoreapp3.0\console1.pdb

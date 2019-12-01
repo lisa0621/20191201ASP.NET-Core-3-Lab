@@ -1,0 +1,8 @@
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\bin\Release\netstandard2.0\classlib1.deps.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\bin\Release\netstandard2.0\classlib1.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\bin\Release\netstandard2.0\classlib1.pdb
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\obj\Release\netstandard2.0\classlib1.csprojAssemblyReference.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\obj\Release\netstandard2.0\classlib1.AssemblyInfoInputs.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\obj\Release\netstandard2.0\classlib1.AssemblyInfo.cs
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\obj\Release\netstandard2.0\classlib1.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\solution1\classlib1\obj\Release\netstandard2.0\classlib1.pdb
