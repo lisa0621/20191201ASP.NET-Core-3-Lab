@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,10 @@ namespace web1
         private readonly HelloWorldMessage msg;
 
         // "Scoped" SERVICE SHOULDN'T DO CONSTRUCTOR DI!!
-        public HelloWorldMiddleware(RequestDelegate next, HelloWorldMessage msg)
+        public HelloWorldMiddleware(RequestDelegate next, IOptions<HelloWorldMessage> msg)
         {
             _next = next;
-            this.msg = msg;
+            this.msg = msg.Value;
         }
 
         public async Task InvokeAsync(HttpContext context)
