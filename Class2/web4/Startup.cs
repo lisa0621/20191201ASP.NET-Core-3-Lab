@@ -41,12 +41,12 @@ namespace web4
 
             //不是Https導頁為Https，重來
             app.UseHttpsRedirection();
-
-            //是不是靜態檔實體路徑wwwroot，擺這沒有權限
-            ////app.UseStaticFiles();
-
+                       
             //路由
             app.UseRouting();
+
+            //是不是靜態檔實體路徑wwwroot，一定要在Routing後，擺這沒有權限
+            ////app.UseStaticFiles();
 
             //是否有權限
             app.UseAuthorization();
