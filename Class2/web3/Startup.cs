@@ -50,6 +50,7 @@ namespace web3
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                ////endpoints.MapDefaultControllerRoute();
             });
         }
     }
