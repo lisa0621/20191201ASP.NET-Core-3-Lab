@@ -18,11 +18,13 @@ namespace web1
     public class HelloWorldMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly HelloWorldMessage msg;
 
         // "Scoped" SERVICE SHOULDN'T DO CONSTRUCTOR DI!!
-        public HelloWorldMiddleware(RequestDelegate next)
+        public HelloWorldMiddleware(RequestDelegate next, HelloWorldMessage msg)
         {
             _next = next;
+            this.msg = msg;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -31,7 +33,7 @@ namespace web1
 
             await _next(context);
 
-            await context.Response.WriteAsync("World");
+            await context.Response.WriteAsync(this.msg.Message);
         }
     }
 }

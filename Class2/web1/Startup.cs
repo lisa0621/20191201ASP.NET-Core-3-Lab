@@ -12,19 +12,26 @@ namespace web1 {
     public class Startup {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices (IServiceCollection services) 
-        { 
-                   
+        public void ConfigureServices (IServiceCollection services) {
+            services.AddSingleton<HelloWorldMessage> (new HelloWorldMessage () {
+                Message = "Will"
+            });
+
+            services.AddSingleton<HelloWorldMessage> ((sp) => {
+                return new HelloWorldMessage () {
+                Message = "John"
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app, IWebHostEnvironment env) 
-        {  
-             
-            app.Use(async (context, next) => {
-                await context.Response.WriteAsync("123");
-                await next();
-                await context.Response.WriteAsync("456");
+        public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
+            app.UseHelloWorld ();
+
+            app.Use (async (context, next) => {
+                await context.Response.WriteAsync ("123");
+                await next ();
+                await context.Response.WriteAsync ("456");
             });
 
             //app.Use(async (context, next) => {
@@ -33,11 +40,9 @@ namespace web1 {
             //    await context.Response.WriteAsync("World");
             //});
 
-            app.UseHelloWorld();
-
-            app.Run(async (context) => {
-                await context.Response.WriteAsync("Will");
-            });  
+            app.Run (async (context) => {
+                await context.Response.WriteAsync ("Will");
+            });
 
             // if (env.IsDevelopment ()) {
             //     app.UseDeveloperExceptionPage ();
