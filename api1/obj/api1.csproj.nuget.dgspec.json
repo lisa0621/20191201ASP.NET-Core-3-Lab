@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj": {}
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj": {}
   },
   "projects": {
-    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj": {
+    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj",
+        "projectUniqueName": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj",
         "projectName": "api1",
-        "projectPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj",
+        "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\api1.csproj",
         "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
-        "outputPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\obj\\",
+        "outputPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\api1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -49,6 +49,10 @@
               "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.0, )"
             }
