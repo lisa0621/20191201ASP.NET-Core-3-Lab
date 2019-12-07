@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj": {}
+    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj": {}
   },
   "projects": {
-    "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj": {
+    "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj",
+        "projectUniqueName": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj",
         "projectName": "web4",
-        "projectPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj",
+        "projectPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\web4.csproj",
         "packagesPath": "C:\\Users\\lisa7\\.nuget\\packages\\",
-        "outputPath": "g:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\obj\\",
+        "outputPath": "G:\\我的雲端硬碟\\miniaspTraining\\20191201ASP.NETCore3\\WP\\Class2\\web4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
