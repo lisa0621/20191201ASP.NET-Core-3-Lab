@@ -132,33 +132,69 @@ namespace EFCoreDemo.Controllers
         //}
 
         // GET: api/Courses/5
-        [HttpGet("{id}")]
-        public IActionResult GetCourseDepartmentAsync(int id)
+        //[HttpGet("{id}")]
+        //public IActionResult GetCourseDepartmentAsync(int id)
+        //{
+        //    var course = _context.Course
+        //        .Include(p => p.Department)
+        //        .Select(p => new
+        //        {
+        //            p.CourseId,
+        //            p.Title,
+        //            p.Credits,
+        //            p.DepartmentId,
+        //            p.Department.Name,
+        //            Instructors = p.CourseInstructor.Select(c => new
+        //            {
+        //                c.InstructorId,
+        //                c.Instructor.FirstName,
+        //                c.Instructor.LastName
+        //            })
+        //        })
+        //        .FirstOrDefault(p => p.CourseId == id);
+
+        //    if (course == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return new JsonResult(course);
+        //}
+
+        //[HttpGet("{id:int}")]
+        //public async Task<IActionResult> GetCourseAsync(int id)
+        //{
+        //    var course = await (
+        //        from p in _context.Course//.Include(p => p.Department)
+        //where p.CourseId == id && p.Department.DepartmentId > 1
+        //        select new
+        //        {
+        //            p.CourseId,
+        //            p.Title,
+        //            p.Credits,
+        //            p.DepartmentId,
+        //            DepartmentName = p.Department.Name,
+        //            Instructors = p.CourseInstructor.Select(x => new {
+        //                x.InstructorId,
+        //                InstructorFirstName = x.Instructor.FirstName,
+        //                InstructorLastname = x.Instructor.LastName
+        //            })
+        //        }).SingleAsync();
+
+        //    if (course == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return new JsonResult(course);
+        //}
+
+        [HttpGet("{Test}")]
+        public async Task<IActionResult> GetCourseTestAsync()
         {
-            var course = _context.Course
-                .Include(p => p.Department)
-                .Select(p => new
-                {
-                    p.CourseId,
-                    p.Title,
-                    p.Credits,
-                    p.DepartmentId,
-                    p.Department.Name,
-                    Instructors = p.CourseInstructor.Select(c => new
-                    {
-                        c.InstructorId,
-                        c.Instructor.FirstName,
-                        c.Instructor.LastName
-                    })
-                })
-                .FirstOrDefault(p => p.CourseId == id);
-
-            if (course == null)
-            {
-                return NotFound();
-            }
-
-            return new JsonResult(course);
+            var course = await (from p in _context.Course select p).SingleAsync();
+             
+            return new JsonResult(course.Department);
         }
 
         // PUT: api/Courses/5
@@ -172,7 +208,9 @@ namespace EFCoreDemo.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(course).State = EntityState.Modified;
+            var one = _context.Course.Find(id);
+            one.Credits = course.Credits;
+            //_context.Entry(course).State = EntityState.Modified;
 
             try
             {
