@@ -60,14 +60,30 @@ namespace EFCoreDemo.Controllers
         ////[HttpGet("{id:int}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
         {
-            var course = await _context.Course.FindAsync(id);
+            //var course = await _context.Course
+            //    .Include(p => p.Department)
+            //    .SingleAsync(p => p.CourseId == id);
+
+            var course = await (
+                   from p in _context.Course.Include(p => p.Department)
+                   where p.CourseId == id
+                   select new
+                   {
+                       p.CourseId,
+                       p.Title,
+                       p.Credits,
+                       p.DepartmentId,
+                       p.Department.Name
+                   }).SingleAsync();
 
             if (course == null)
             {
                 return NotFound();
             }
 
-            return course;
+            //return course;
+
+            return new JsonResult(course);
         }
 
         // PUT: api/Courses/5
