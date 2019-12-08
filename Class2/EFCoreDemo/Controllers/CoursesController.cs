@@ -27,7 +27,7 @@ namespace EFCoreDemo.Controllers
             return await _context.Course.ToListAsync();
         }
 
-        // GET: api/Courses
+        // GET: api/Courses/Git
         [HttpGet("Git")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourseForGitAsync()
         {
@@ -86,6 +86,11 @@ namespace EFCoreDemo.Controllers
         [HttpPost]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             _context.Course.Add(course);
             await _context.SaveChangesAsync();
 
