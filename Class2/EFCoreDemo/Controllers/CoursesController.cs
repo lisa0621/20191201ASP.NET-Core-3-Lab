@@ -34,6 +34,13 @@ namespace EFCoreDemo.Controllers
             return await _context.Course.Where(p => p.Title.Contains("Git")).ToListAsync();
         }
 
+        // GET: api/Courses/File
+        [HttpGet("File")]
+        public ActionResult<CourseFile> GetCourseForFile(string filename)
+        {
+            return new CourseFile() { FileName = filename};
+        }
+
         // GET: api/Courses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
@@ -117,5 +124,10 @@ namespace EFCoreDemo.Controllers
         {
             return _context.Course.Any(e => e.CourseId == id);
         }
+    }
+
+    public class CourseFile
+    {
+        public string FileName { get; set; }
     }
 }
