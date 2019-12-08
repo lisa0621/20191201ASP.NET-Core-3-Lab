@@ -25,8 +25,6 @@ namespace EFCoreDemo.Models
         public virtual DbSet<VwCourseStudentCount> VwCourseStudentCount { get; set; }
         public virtual DbSet<VwCourseStudents> VwCourseStudents { get; set; }
         public virtual DbSet<VwDepartmentCourseCount> VwDepartmentCourseCount { get; set; }
-        public virtual DbSet<Blog> Blogs { get; set; }
-        public virtual DbSet<Post> Posts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -42,7 +40,13 @@ namespace EFCoreDemo.Models
                 entity.HasIndex(e => e.DepartmentId)
                     .HasName("IX_DepartmentID");
 
-                entity.Property(e => e.DepartmentId).HasDefaultValueSql("((1))");
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.DepartmentId)
+                    .HasColumnName("DepartmentID")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.Title).HasMaxLength(50);
 
                 entity.HasOne(d => d.Department)
                     .WithMany(p => p.Course)
@@ -61,6 +65,10 @@ namespace EFCoreDemo.Models
                 entity.HasIndex(e => e.InstructorId)
                     .HasName("IX_InstructorID");
 
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.InstructorId).HasColumnName("InstructorID");
+
                 entity.HasOne(d => d.Course)
                     .WithMany(p => p.CourseInstructor)
                     .HasForeignKey(d => d.CourseId)
@@ -77,7 +85,19 @@ namespace EFCoreDemo.Models
                 entity.HasIndex(e => e.InstructorId)
                     .HasName("IX_InstructorID");
 
-                entity.Property(e => e.RowVersion).IsRowVersion();
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+
+                entity.Property(e => e.Budget).HasColumnType("money");
+
+                entity.Property(e => e.InstructorId).HasColumnName("InstructorID");
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.RowVersion)
+                    .IsRequired()
+                    .IsRowVersion();
+
+                entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.Instructor)
                     .WithMany(p => p.Department)
@@ -92,6 +112,12 @@ namespace EFCoreDemo.Models
 
                 entity.HasIndex(e => e.StudentId)
                     .HasName("IX_StudentID");
+
+                entity.Property(e => e.EnrollmentId).HasColumnName("EnrollmentID");
+
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.StudentId).HasColumnName("StudentID");
 
                 entity.HasOne(d => d.Course)
                     .WithMany(p => p.Enrollment)
@@ -112,7 +138,11 @@ namespace EFCoreDemo.Models
                 entity.HasIndex(e => e.InstructorId)
                     .HasName("IX_InstructorID");
 
-                entity.Property(e => e.InstructorId).ValueGeneratedNever();
+                entity.Property(e => e.InstructorId)
+                    .HasColumnName("InstructorID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Location).HasMaxLength(50);
 
                 entity.HasOne(d => d.Instructor)
                     .WithOne(p => p.OfficeAssignment)
@@ -123,7 +153,24 @@ namespace EFCoreDemo.Models
 
             modelBuilder.Entity<Person>(entity =>
             {
-                entity.Property(e => e.Discriminator).HasDefaultValueSql("('Instructor')");
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Discriminator)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .HasDefaultValueSql("('Instructor')");
+
+                entity.Property(e => e.EnrollmentDate).HasColumnType("datetime");
+
+                entity.Property(e => e.FirstName)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.HireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.LastName)
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<VwCourseStudentCount>(entity =>
@@ -131,6 +178,14 @@ namespace EFCoreDemo.Models
                 entity.HasNoKey();
 
                 entity.ToView("vwCourseStudentCount");
+
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.Title).HasMaxLength(50);
             });
 
             modelBuilder.Entity<VwCourseStudents>(entity =>
@@ -138,6 +193,18 @@ namespace EFCoreDemo.Models
                 entity.HasNoKey();
 
                 entity.ToView("vwCourseStudents");
+
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.CourseTitle).HasMaxLength(50);
+
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+
+                entity.Property(e => e.DepartmentName).HasMaxLength(50);
+
+                entity.Property(e => e.StudentId).HasColumnName("StudentID");
+
+                entity.Property(e => e.StudentName).HasMaxLength(101);
             });
 
             modelBuilder.Entity<VwDepartmentCourseCount>(entity =>
@@ -145,6 +212,10 @@ namespace EFCoreDemo.Models
                 entity.HasNoKey();
 
                 entity.ToView("vwDepartmentCourseCount");
+
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+
+                entity.Property(e => e.Name).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

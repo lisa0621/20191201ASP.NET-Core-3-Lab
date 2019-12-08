@@ -1,19 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web1", "web1\web1.csproj", "{C1B3550B-5463-4845-9FD0-89FCDBBDBAE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web1", "web1\web1.csproj", "{C1B3550B-5463-4845-9FD0-89FCDBBDBAE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web2", "web2\web2.csproj", "{875370AF-AD78-4797-90FB-59784ECB96BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web2", "web2\web2.csproj", "{875370AF-AD78-4797-90FB-59784ECB96BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web3", "web3\web3.csproj", "{57B8FBBB-547E-45F2-9C13-AEA2B4DAC011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web3", "web3\web3.csproj", "{57B8FBBB-547E-45F2-9C13-AEA2B4DAC011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web4", "web4\web4.csproj", "{B10AD7A2-6521-42DD-9F4B-0E658127B133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web4", "web4\web4.csproj", "{B10AD7A2-6521-42DD-9F4B-0E658127B133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web5", "web5\web5.csproj", "{A561C64E-E243-48AB-B4D5-1A6BE0B35365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web5", "web5\web5.csproj", "{A561C64E-E243-48AB-B4D5-1A6BE0B35365}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web6", "web6\web6.csproj", "{A0258B41-73AA-4070-AE45-2F54AC56D4DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web6", "web6\web6.csproj", "{A0258B41-73AA-4070-AE45-2F54AC56D4DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo", "EFCoreDemo\EFCoreDemo.csproj", "{88863B9A-E199-4A08-AFAC-30A49FA7243F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C1B3550B-5463-4845-9FD0-89FCDBBDBAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -100,5 +99,23 @@ Global
 		{A0258B41-73AA-4070-AE45-2F54AC56D4DD}.Release|x64.Build.0 = Release|Any CPU
 		{A0258B41-73AA-4070-AE45-2F54AC56D4DD}.Release|x86.ActiveCfg = Release|Any CPU
 		{A0258B41-73AA-4070-AE45-2F54AC56D4DD}.Release|x86.Build.0 = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|x64.Build.0 = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Debug|x86.Build.0 = Debug|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|x64.ActiveCfg = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|x64.Build.0 = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|x86.ActiveCfg = Release|Any CPU
+		{88863B9A-E199-4A08-AFAC-30A49FA7243F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {887D948E-FBC4-4543-9FD6-489CF886AF97}
 	EndGlobalSection
 EndGlobal
