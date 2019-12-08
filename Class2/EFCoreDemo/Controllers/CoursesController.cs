@@ -55,6 +55,13 @@ namespace EFCoreDemo.Controllers
             return new CourseFile() { FileName = filename };
         }
 
+        // GET: api/Courses/CourseStudentCount
+        [HttpGet("CourseStudentCount")]
+        public ActionResult<IEnumerable<VwCourseStudentCount>> GetCourseStudentCount(string filename)
+        {
+            return _context.VwCourseStudentCount.ToList();
+        }
+
         //// GET: api/Courses/5
         //[HttpGet("{id:int}")]
         //public async Task<IActionResult> GetCourseAsync(int id)
