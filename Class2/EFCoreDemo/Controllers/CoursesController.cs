@@ -27,6 +27,13 @@ namespace EFCoreDemo.Controllers
             return await _context.Course.ToListAsync();
         }
 
+        // GET: api/Courses
+        [HttpGet("Git")]
+        public async Task<ActionResult<IEnumerable<Course>>> GetCourseForGitAsync()
+        {
+            return await _context.Course.Where(p => p.Title.Contains("Git")).ToListAsync();
+        }
+
         // GET: api/Courses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
