@@ -150,6 +150,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": " GetCourseForFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/File?filename=abc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"File"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}

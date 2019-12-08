@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EFCoreDemo.Models;
+using Microsoft.Extensions.FileProviders;
 
 namespace EFCoreDemo.Controllers
 {
@@ -34,15 +35,29 @@ namespace EFCoreDemo.Controllers
             return await _context.Course.Where(p => p.Title.Contains("Git")).ToListAsync();
         }
 
+        // GET: api/Courses/Pic
+        [HttpGet("Pic")]
+        public IActionResult GetCourseForPic(string filename = "mang.png")
+        {
+            string filePath = @"C:\Users\lisa7\Downloads";
+
+            IFileProvider provider = new PhysicalFileProvider(filePath);
+            IFileInfo fileInfo = provider.GetFileInfo(filename);
+            var readStream = fileInfo.CreateReadStream();
+
+            return File(readStream, "image/jpeg");
+        }
+
         // GET: api/Courses/File
         [HttpGet("File")]
         public ActionResult<CourseFile> GetCourseForFile(string filename)
         {
-            return new CourseFile() { FileName = filename};
+            return new CourseFile() { FileName = filename };
         }
 
         // GET: api/Courses/5
         [HttpGet("{id}")]
+        ////[HttpGet("{id:int}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
         {
             var course = await _context.Course.FindAsync(id);
