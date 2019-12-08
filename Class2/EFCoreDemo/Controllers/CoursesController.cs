@@ -55,33 +55,108 @@ namespace EFCoreDemo.Controllers
             return new CourseFile() { FileName = filename };
         }
 
+        //// GET: api/Courses/5
+        //[HttpGet("{id:int}")]
+        //public async Task<IActionResult> GetCourseAsync(int id)
+        //{
+        //    //var course = await _context.Course
+        //    //    .Include(p => p.Department)
+        //    //    .SingleAsync(p => p.CourseId == id);
+
+        //    //var course = await (
+        //    //       from p in _context.Course.Include(p => p.Department)
+        //    //       where p.CourseId == id
+        //    //       select new
+        //    //       {
+        //    //           p.CourseId,
+        //    //           p.Title,
+        //    //           p.Credits,
+        //    //           p.DepartmentId,
+        //    //           p.Department.Name
+        //    //       }).SingleAsync();
+
+        //    var course = await (
+        //            from p in _context.Course//.Include(p => p.Department)
+        //            where p.CourseId == id && p.Department.DepartmentId > 1
+        //            select new
+        //            {
+        //                p.CourseId,
+        //                p.Title,
+        //                p.Credits,
+        //                p.DepartmentId,
+        //                DepartmentName = p.Department.Name,
+        //                Instructors = p.CourseInstructor
+        //                .Select(x => new {
+        //                    x.InstructorId,
+        //                    InstructorFirstName = x.Instructor.FirstName,
+        //                    InstructorLastname = x.Instructor.LastName
+        //                })
+        //            }).SingleAsync();
+
+        //    if (course == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    //return course;
+
+        //    return new JsonResult(course);
+        //}
+
+        //[HttpGet("{id:int}")]
+        //public async Task<IActionResult> GetCourseAsync(int id)
+        //{
+        //    var course = await (
+        //        from p in _context.Course//.Include(p => p.Department)
+        //where p.CourseId == id && p.Department.DepartmentId > 1
+        //        select new
+        //        {
+        //            p.CourseId,
+        //            p.Title,
+        //            p.Credits,
+        //            p.DepartmentId,
+        //            DepartmentName = p.Department.Name,
+        //            Instructors = p.CourseInstructor.Select(x => new {
+        //                x.InstructorId,
+        //                InstructorFirstName = x.Instructor.FirstName,
+        //                InstructorLastname = x.Instructor.LastName
+        //            })
+        //        }).SingleAsync();
+
+        //    if (course == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return new JsonResult(course);
+        //}
+
         // GET: api/Courses/5
         [HttpGet("{id}")]
-        ////[HttpGet("{id:int}")]
-        public async Task<ActionResult<Course>> GetCourse(int id)
+        public IActionResult GetCourseDepartmentAsync(int id)
         {
-            //var course = await _context.Course
-            //    .Include(p => p.Department)
-            //    .SingleAsync(p => p.CourseId == id);
-
-            var course = await (
-                   from p in _context.Course.Include(p => p.Department)
-                   where p.CourseId == id
-                   select new
-                   {
-                       p.CourseId,
-                       p.Title,
-                       p.Credits,
-                       p.DepartmentId,
-                       p.Department.Name
-                   }).SingleAsync();
+            var course = _context.Course
+                .Include(p => p.Department)
+                .Select(p => new
+                {
+                    p.CourseId,
+                    p.Title,
+                    p.Credits,
+                    p.DepartmentId,
+                    p.Department.Name,
+                    Instructors = p.CourseInstructor.Select(c => new
+                    {
+                        c.InstructorId,
+                        c.Instructor.FirstName,
+                        c.Instructor.LastName
+                    })
+                })
+                .FirstOrDefault(p => p.CourseId == id);
 
             if (course == null)
             {
                 return NotFound();
             }
-
-            //return course;
 
             return new JsonResult(course);
         }
