@@ -20,6 +20,8 @@ namespace EFCoreDemo.Models
         public DateTime? EnrollmentDate { get; set; }
         public string Discriminator { get; set; }
 
+        public DateTime DateModified { get; set; } = DateTime.Now;
+
         public virtual OfficeAssignment OfficeAssignment { get; set; }
         public virtual ICollection<CourseInstructor> CourseInstructor { get; set; }
         public virtual ICollection<Department> Department { get; set; }

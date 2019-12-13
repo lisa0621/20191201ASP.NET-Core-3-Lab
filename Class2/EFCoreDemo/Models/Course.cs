@@ -22,6 +22,8 @@ namespace EFCoreDemo.Models
         [Required]
         public int DepartmentId { get; set; }
 
+        public DateTime DateModified { get; set; } = DateTime.Now;
+
         public virtual Department Department { get; set; }
         public virtual ICollection<CourseInstructor> CourseInstructor { get; set; }
         public virtual ICollection<Enrollment> Enrollment { get; set; }
