@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "1c597ded-c5ff-4360-888d-c5b177acd8b4",
+		"name": "Core3 CourseAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCourse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDepartments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Departments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDepartmentCourseCounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Departments/DepartmentCourseCount",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Departments",
+						"DepartmentCourseCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourseById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Courses/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCourse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"title\": \"MM Test\",\r\n        \"credits\": 1,\r\n        \"departmentId\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44302/api/Courses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostDepartments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\": \"test123\",\r\n     \"budget\": 900,\r\n     \"startDate\": \"2019-03-21\",\r\n     \"instructorId\": 2,\r\n     \"rowVersion\":\"wawe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44302/api/Departments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCourse",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"courseId\": 15,\r\n        \"title\": \"UpDateTest\",\r\n        \"credits\": 2,\r\n        \"departmentId\": 2,\r\n        \"department\": null,\r\n        \"courseInstructor\": [],\r\n        \"enrollment\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Courses/15",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Courses",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCourse Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"departmentId\": 15,\r\n        \"name\": \"hello 123\",\r\n        \"budget\": 900.0000,\r\n        \"startDate\": \"2019-03-21T00:00:00\",\r\n        \"instructorId\": 2,\r\n        \"rowVersion\": \"AAAAAAAAF3I=\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Departments/15",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Departments",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCourse",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/16",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departments",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Departments/14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Departments",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourseStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/CourseStudents",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"CourseStudents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourseStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/CourseStudents/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"CourseStudents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourseStudentCounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/CourseStudentCount",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"CourseStudentCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourseStudentCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Courses/CourseStudentCount/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Courses",
+						"CourseStudentCount",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDepartmentCourseCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44302/api/Departments/DepartmentCourseCount/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44302",
+					"path": [
+						"api",
+						"Departments",
+						"DepartmentCourseCount",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
