@@ -87,5 +87,26 @@ namespace EFCoreDemo.Controllers
         {
             return _context.Department.Any(e => e.DepartmentId == id);
         }
+
+        // GET: api/Departments/DepartmentCourseCount
+        [HttpGet("DepartmentCourseCount")]
+        public async Task<ActionResult<IEnumerable<VwDepartmentCourseCount>>> GetDepartmentCourseCountAll()
+        {
+            return await _context.VwDepartmentCourseCount.FromSqlRaw("SELECT * FROM vwDepartmentCourseCount").ToListAsync(); ;
+        }
+
+        // GET: api/Departments/DepartmentCourseCount/departmentId
+        [HttpGet("DepartmentCourseCount/{departmentId}")]
+        public async Task<ActionResult<VwDepartmentCourseCount>> GetDepartmentCourseCount(int departmentId)
+        {
+            var departmentCourseCount = await _context.VwDepartmentCourseCount.FromSqlRaw($"SELECT * FROM vwDepartmentCourseCount WHERE DepartmentID = {departmentId}").FirstOrDefaultAsync();
+
+            if (departmentCourseCount == null)
+            {
+                return NotFound();
+            }
+
+            return departmentCourseCount;
+        }
     }
 }
