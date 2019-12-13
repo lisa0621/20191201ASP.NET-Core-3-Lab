@@ -52,23 +52,7 @@ namespace EFCoreDemo.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(department).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DepartmentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.Database.ExecuteSqlInterpolatedAsync($"[dbo].[Department_Update] {id},{department.Name},{department.Budget},{department.StartDate},{department.InstructorId},{department.RowVersion}");
 
             return NoContent();
         }
@@ -79,8 +63,7 @@ namespace EFCoreDemo.Controllers
         [HttpPost]
         public async Task<ActionResult<Department>> PostDepartment(Department department)
         {
-            _context.Department.Add(department);
-            await _context.SaveChangesAsync();
+            await _context.Database.ExecuteSqlInterpolatedAsync($"[dbo].[Department_Insert] {department.Name},{department.Budget},{department.StartDate},{department.InstructorId}");
 
             return CreatedAtAction("GetDepartment", new { id = department.DepartmentId }, department);
         }
@@ -95,8 +78,7 @@ namespace EFCoreDemo.Controllers
                 return NotFound();
             }
 
-            _context.Department.Remove(department);
-            await _context.SaveChangesAsync();
+            await _context.Database.ExecuteSqlInterpolatedAsync($"[dbo].[Department_Delete] {id},{department.RowVersion}");
 
             return department;
         }
