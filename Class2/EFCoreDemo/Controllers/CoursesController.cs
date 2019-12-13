@@ -28,6 +28,27 @@ namespace EFCoreDemo.Controllers
             return await _context.Course.ToListAsync();
         }
 
+        // GET: api/Courses/CourseStudents
+        [HttpGet("CourseStudents")]
+        public async Task<ActionResult<IEnumerable<VwCourseStudents>>> GetCourseStudents()
+        {
+            return await _context.VwCourseStudents.ToListAsync();
+        }
+
+        // GET: api/Courses/CourseStudent/courseId
+        [HttpGet("CourseStudents/{courseId}")]
+        public async Task<ActionResult<VwCourseStudents>> GetCourseStudent(int courseId)
+        {
+            var courseStudent = await _context.VwCourseStudents.FirstOrDefaultAsync(v => v.CourseId == courseId);
+
+            if (courseStudent == null)
+            {
+                return NotFound();
+            }
+
+            return courseStudent;
+        }
+
         // GET: api/Courses/Git
         [HttpGet("Git")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourseForGitAsync()
@@ -60,6 +81,20 @@ namespace EFCoreDemo.Controllers
         public ActionResult<IEnumerable<VwCourseStudentCount>> GetCourseStudentCount(string filename)
         {
             return _context.VwCourseStudentCount.ToList();
+        }
+
+        // GET: api/Courses/CourseStudentCount/courseId
+        [HttpGet("CourseStudentCount/{courseId}")]
+        public async Task<ActionResult<VwCourseStudentCount>> GetCourseStudentCount(int courseId)
+        {
+            var courseStudentCount = await _context.VwCourseStudentCount.FirstOrDefaultAsync(v => v.CourseId == courseId);
+
+            if (courseStudentCount == null)
+            {
+                return NotFound();
+            }
+
+            return courseStudentCount;
         }
 
         //// GET: api/Courses/5
