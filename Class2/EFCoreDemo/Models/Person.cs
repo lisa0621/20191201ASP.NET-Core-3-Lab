@@ -22,6 +22,8 @@ namespace EFCoreDemo.Models
 
         public DateTime DateModified { get; set; } = DateTime.Now;
 
+        public bool IsDelete { get; set; }
+
         public virtual OfficeAssignment OfficeAssignment { get; set; }
         public virtual ICollection<CourseInstructor> CourseInstructor { get; set; }
         public virtual ICollection<Department> Department { get; set; }

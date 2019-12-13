@@ -21,8 +21,10 @@ namespace EFCoreDemo.Models
 
         public DateTime DateModified { get; set; } = DateTime.Now;
 
-        public virtual Person Instructor { get; set; }
+        public bool IsDelete { get; set; }
 
+        public virtual Person Instructor { get; set; }
+        
         [JsonIgnore]
         public virtual ICollection<Course> Course { get; set; }
     }
