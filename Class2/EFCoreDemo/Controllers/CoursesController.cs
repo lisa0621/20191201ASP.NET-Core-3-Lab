@@ -247,14 +247,14 @@ namespace EFCoreDemo.Controllers
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCourse(int id)
-        {           
+        {
             var course = this._context.Course.Find(id);
             if (!await TryUpdateModelAsync(course))
             {
                 return BadRequest();
             }
 
-            course.Credits += 1;            
+            course.Credits += 1;
 
             //if (!ModelState.IsValid)
             //{
@@ -322,6 +322,13 @@ namespace EFCoreDemo.Controllers
             }
 
             return NoContent();
+        }
+
+        [HttpGet("String")]
+        [Consumes("text/json")]
+        public String GetString()
+        {
+            return "OK";
         }
 
         // POST: api/Courses
