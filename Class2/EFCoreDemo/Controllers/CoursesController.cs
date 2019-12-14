@@ -11,6 +11,7 @@ using Microsoft.Extensions.FileProviders;
 namespace EFCoreDemo.Controllers
 {
     [Route("api/[controller]")]
+    [ApiConventionType(typeof(DefaultApiConventions))]
     [ApiController]
     public class CoursesController : ControllerBase
     {

@@ -10,6 +10,7 @@ using EFCoreDemo.Models;
 namespace EFCoreDemo.Controllers
 {
     [Route("api/[controller]")]
+    [ApiConventionType(typeof(DefaultApiConventions))]
     [ApiController]
     public class PeopleController : ControllerBase
     {
