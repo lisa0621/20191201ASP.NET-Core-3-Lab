@@ -66,7 +66,7 @@ namespace EFCoreDemo.Controllers
         {
             await _context.Database.ExecuteSqlInterpolatedAsync($"[dbo].[Department_Insert] {department.Name},{department.Budget},{department.StartDate},{department.InstructorId}");
 
-            return CreatedAtAction("GetDepartment", new { id = department.DepartmentId }, department);
+            return CreatedAtAction(nameof(GetDepartment), new { id = department.DepartmentId }, department);
         }
 
         // DELETE: api/Departments/5

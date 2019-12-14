@@ -50,8 +50,8 @@ namespace EFCoreDemo.Controllers
             return courseStudent;
         }
 
-        // GET: api/Courses/Git
-        [HttpGet("Git")]
+        // GET: mygit/git
+        [HttpGet("~/mygit/git")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourseForGitAsync()
         {
             return await _context.Course.Where(p => p.Title.Contains("Git")).ToListAsync();
@@ -288,7 +288,7 @@ namespace EFCoreDemo.Controllers
             _context.Course.Add(course);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCourse", new { id = course.CourseId }, course);
+            return CreatedAtAction(nameof(GetCourse), new { id = course.CourseId }, course);
         }
 
         // DELETE: api/Courses/5
