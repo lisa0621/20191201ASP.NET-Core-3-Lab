@@ -234,18 +234,22 @@ namespace EFCoreDemo.Controllers
         //    return new JsonResult(course);
         //}
 
-        [HttpGet("{Test}")]
-        public async Task<IActionResult> GetCourseTestAsync()
-        {
-            var course = await (from p in _context.Course select p).SingleAsync();
+        //[HttpGet("{Test}")]
+        //public async Task<IActionResult> GetCourseTestAsync()
+        //{
+        //    var course = await (from p in _context.Course select p).SingleAsync();
 
-            return new JsonResult(course.Department);
-        }
+        //    return new JsonResult(course.Department);
+        //}
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> PutCourse(int id)
         {
             var course = this._context.Course.Find(id);
@@ -287,6 +291,10 @@ namespace EFCoreDemo.Controllers
         // PATCH: api/Courses/5
         [HttpPatch("{id}")]
         [Authorize]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> PatchCourse(int id, CoursePatchVM coursePatchVM)
         {
             if (id != coursePatchVM.CourseId)
@@ -325,9 +333,10 @@ namespace EFCoreDemo.Controllers
         }
 
         [HttpGet("String")]
-        [Consumes("text/json")]
+        [Produces("text/json")]
         public String GetString()
         {
+            //throw new System.Exception("This is exception sample from Index().");
             return "OK";
         }
 
