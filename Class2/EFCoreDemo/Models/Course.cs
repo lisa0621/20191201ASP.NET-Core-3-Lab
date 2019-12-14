@@ -16,8 +16,10 @@ namespace EFCoreDemo.Models
         [Required]
         public int CourseId { get; set; }
         [Required]
+        [MaxLength(30)]
         public string Title { get; set; }
         [Required]
+        [Range(1, 5)]
         public int Credits { get; set; }
         [Required]
         public int DepartmentId { get; set; }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EFCoreDemo.Models;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EFCoreDemo.Controllers
 {
@@ -74,6 +75,7 @@ namespace EFCoreDemo.Controllers
         [HttpGet("File")]
         public ActionResult<CourseFile> GetCourseForFile(string filename)
         {
+            //return StatusCode(999, new { });
             return new CourseFile() { FileName = filename };
         }
 
@@ -236,7 +238,7 @@ namespace EFCoreDemo.Controllers
         public async Task<IActionResult> GetCourseTestAsync()
         {
             var course = await (from p in _context.Course select p).SingleAsync();
-             
+
             return new JsonResult(course.Department);
         }
 
@@ -244,15 +246,63 @@ namespace EFCoreDemo.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCourse(int id, Course course)
-        {
-            if (id != course.CourseId)
+        public async Task<IActionResult> PutCourse(int id)
+        {           
+            var course = this._context.Course.Find(id);
+            if (!await TryUpdateModelAsync(course))
             {
                 return BadRequest();
             }
 
+            course.Credits += 1;            
+
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest();
+            //}
+
             var one = _context.Course.Find(id);
             one.Credits = course.Credits;
+            //_context.Entry(course).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CourseExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // PATCH: api/Courses/5
+        [HttpPatch("{id}")]
+        [Authorize]
+        public async Task<IActionResult> PatchCourse(int id, CoursePatchVM coursePatchVM)
+        {
+            if (id != coursePatchVM.CourseId)
+            {
+                return BadRequest();
+            }
+
+            if (!await TryUpdateModelAsync<CoursePatchVM>(coursePatchVM, "Course", i => i.CourseId, i => i.Title, i => i.Credits))
+            {
+                return BadRequest();
+            }
+
+            var course = this._context.Course.Find(id);
+            course.Title = coursePatchVM.Title;
+            course.Credits = coursePatchVM.Credits;
+
             //_context.Entry(course).State = EntityState.Modified;
 
             try
