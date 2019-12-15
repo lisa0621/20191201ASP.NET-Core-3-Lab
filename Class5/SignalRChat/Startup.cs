@@ -26,6 +26,7 @@ namespace SignalRChat
         {
             services.AddRazorPages();
             services.AddSignalR();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,15 @@ namespace SignalRChat
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            // Make sure the CORS middleware is ahead of SignalR.
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins()
+                    .AllowAnyHeader()
+                    .WithMethods()
+                    .AllowCredentials();
+            });
 
             app.UseRouting();
 
