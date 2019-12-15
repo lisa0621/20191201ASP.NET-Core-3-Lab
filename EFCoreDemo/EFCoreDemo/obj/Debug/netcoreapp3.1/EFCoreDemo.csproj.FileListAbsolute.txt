@@ -131,3 +131,14 @@ G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreD
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\obj\Debug\netcoreapp3.1\EFCoreDemo.MvcApplicationPartsAssemblyInfo.cache
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.Seq.dll
