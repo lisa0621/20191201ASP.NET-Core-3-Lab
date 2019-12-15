@@ -142,3 +142,9 @@ G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreD
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
 G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\Serilog.Sinks.Seq.dll
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\web.config
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\appsettings.Development.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\appsettings.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\EFCoreDemo.deps.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\EFCoreDemo.runtimeconfig.json
+G:\我的雲端硬碟\miniaspTraining\20191201ASP.NETCore3\WP\EFCoreDemo\EFCoreDemo\bin\Debug\netcoreapp3.1\out\efpt.config.json
